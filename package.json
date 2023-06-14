@@ -15,7 +15,10 @@
   "description": "About railyway backend services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run transpile && npm run bundle",
+    "transpile": "babel src --out-dir dist",
+    "bundle": "webpack"
   },
   "author": "AmarJothi J",
   "license": "ISC"
