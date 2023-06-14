@@ -20,8 +20,8 @@ mongoose
   .catch((e) => console.log(e));
 
 app.use(express.json());
-app.use("api/users", users);
-app.use("api/login", login);
+app.use("/api/users", users);
+app.use("/api/login", login);
 prod(app);
 
 const port = config.get("port");
