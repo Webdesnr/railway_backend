@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const config = require("config");
 const users = require("./routes/users");
 const login = require("./startup/login");
+const prod = require("./startup/prod");
 
 if (!config.get("jwtPrivateKey")) {
   console.log("jwtPrivateKey is not defined!");
@@ -18,7 +19,8 @@ mongoose
 app.use(express.json());
 app.use("/api/users", users);
 app.use("/api/login", login);
+prod(app);
 
-const port = process.env.port || 3000;
+const port = config.get("port");
 
 app.listen(port, console.log("listening to the port " + port));

@@ -1,0 +1,4 @@
+{
+  "db": "mongodb+srv://railway_backend:amarjothi@cluster0.u5m5oaw.mongodb.net/?retryWrites=true&w=majority",
+  "port": 4000
+}

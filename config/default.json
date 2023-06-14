@@ -1,4 +1,4 @@
 {
-    "db": "mongodb://localhost:27017/railway_backend",
-    "jwtPrivateKey": ""
+  "app_name": "Izeon Railway",
+  "jwtPrivateKey": ""
 }
